@@ -1,0 +1,16 @@
+$backGroundImage: linear-gradient(to top, rgb(70, 0, 136) 0%, #0f0120 90%);
+
+// Mixins
+
+@mixin flexCenterRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenterColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
