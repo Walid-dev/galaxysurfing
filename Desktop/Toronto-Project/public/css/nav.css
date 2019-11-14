@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(20, 20, 20);
+    color: #fff;
+}
+
+.main_wrapper {
+}
+
+.header_wrapper {
+}
+
+.nav_wrapper {
+}
+
+#nav {
+    height: 10vh;
+    background: rgb(20, 20, 20);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: url("../images/cn-tower-cursor.png"), pointer;
+        right: 5%;
+        top: 50%;
+        z-index: 1;
+        transform: translate(-5%, -50%);
+        -webkit-transform: translate(-5%, -50%);
+        -moz-transform: translate(-5%, -50%);
+        -ms-transform: translate(-5%, -50%);
+        -o-transform: translate(-5%, -50%);
+    }
+
+    .nav-links {
+        position: fixed;
+        background: rgb(20, 20, 20);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1100px at 90% -10%);
+        -webkit-clip-path: circle(1100px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li a {
+        font-size: 25px;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+        -webkit-transition: all 0.5s ease 0.2s;
+        -moz-transition: all 0.5s ease 0.2s;
+        -ms-transition: all 0.5s ease 0.2s;
+        -o-transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+        -webkit-transition: all 0.5s ease 0.4s;
+        -moz-transition: all 0.5s ease 0.4s;
+        -ms-transition: all 0.5s ease 0.4s;
+        -o-transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+        -webkit-transition: all 0.5s ease 0.6s;
+        -moz-transition: all 0.5s ease 0.6s;
+        -ms-transition: all 0.5s ease 0.6s;
+        -o-transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+        -webkit-transition: all 0.5s ease 0.8s;
+        -moz-transition: all 0.5s ease 0.8s;
+        -ms-transition: all 0.5s ease 0.8s;
+        -o-transition: all 0.5s ease 0.8s;
+    }
+
+    li.show {
+        opacity: 1;
+    }
+}
+
+.logo {
+    height: 100%;
+    align-self: center;
+}
+
+.part1 {
+    padding: 0px 30px;
+}
+
+.part2 {
+    height: 100vh;
+}
+
+.part3 {
+    height: 100vh;
+}
+
+.part4 {
+    height: 100vh;
+    background: blue;
+}
+
+h1 {
+    color: green;
+    font-size: 30px;
+}
+
+/** Progress Scrolling Bar **/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/** Header Bg Fading On Scroll **/
+
+#headerBgWrapper {
+    background: rgb(20, 20, 20);
+    margin-top: 10vh;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    background: rgb(20, 20, 20);
+}
+
+.header #bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0) 0, rgba(22, 22, 22, 0) 75%, rgba(31, 51, 63, 0) 100%),
+        url(../images/torontoView.jpg);
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-attachment: scroll, scroll;
+    background-size: auto, auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.heager_bg_section {
+    padding: 70px 30px;
+    color: #fff;
+}
+
+.heager_bg_section h2 {
+    font-size: 2em;
+}
+
+.heager_bg_section p {
+    font-size: 1.2em;
+}
+
+#meteoSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.box {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6px 10px;
+    width: 180px;
+    background: red;
+}
+
+#meteoSection h4 {
+    font-size: 0.9em;
+}
+
+#meteoSection p {
+    font-size: 14px;
+}
+
+.weather_icon_box img {
+    width: 65px;
+    margin-bottom: 0.8rem;
+}
+
+#mapid,
+#mapid2 {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #eeb83b;
+    border-radius: 20px;
+    z-index: 0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#page {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-gap: 8px;
+    padding: 0 25px;
+    grid-template-areas:
+        "head head"
+        "nav  main"
+        "nav  foot";
+    grid-template-rows: 60px 1fr 75px;
+    grid-template-columns: 1.2fr 1fr;
+}
+
+#page > header {
+    grid-area: head;
+    align-self: center;
+    border: 2px solid #eeb83b;
+    padding: 12px 8px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#page > nav {
+    grid-area: nav;
+}
+
+#page > main {
+    grid-area: main;
+    align-self: center;
+    height: 100%;
+    border: 2px solid #eeb83b;
+    padding: 1rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#page > footer {
+    grid-area: foot;
+    align-self: center;
+    height: 100%;
+    padding: 12px 8px;
+    border: 2px solid #eeb83b;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.blue {
+    background: #00d8ff;
+}
+
+.deepPink {
+    background: #ff00cc;
+}
+
+.lime {
+    background: #68f700;
+}
+
+.yellow {
+    background: #ffff66;
+}
+
+.jeans {
+    background: #5dadec;
+}
+
+.clearPink {
+    background: #ff6eff;
+}
+
+.orange {
+    background: #ff9933;
+}
